@@ -1,9 +1,21 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
+const { initDb } = require('./db/connect');
 
 const port = 3000;
 
 app.use('/', require('./routes'));
 
-app.listen(process.env.PORT || port);
-console.log('Server is listening at port ' + (process.env.PORT || port));
+initDb()
+  .then(() => {
+    app.listen(port, () => {
+        console.log(`Server is running on http://localhost:${port}`);
+    });
+    })
+    .catch((err) => {
+        console.error('Failed to initialize database', err);
+    });
+
+    app.use('/contacts', require('./routes/contacts'));
