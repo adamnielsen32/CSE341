@@ -6,6 +6,7 @@ const { initDb } = require('./db/connect');
 
 const port = 3000;
 
+app.use(express.json());
 app.use('/', require('./routes'));
 
 initDb()
