@@ -36,3 +36,31 @@ Content-Type: application/json
 
 ### DELETE
 DELETE http://localhost:3000/contacts/69751c48d833433feaccf82c
+
+
+### Create Contact (POST)
+POST https://cse341-kqba.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Adam",
+  "lastName": "Tester",
+  "email": "adam@test.com",
+  "favoriteColor": "Blue",
+  "birthday": "1995-01-15"
+}
+
+### Update Contact (PUT)
+PUT https://cse341-kqba.onrender.com/contacts/69751f4ed3d2d34bb4c6b96d
+Content-Type: application/json
+
+{
+  "firstName": "Adam",
+  "lastName": "Updated",
+  "email": "adam.updated@test.com",
+  "favoriteColor": "Green",
+  "birthday": "1995-01-15"
+}
+
+### Delete Contact (DELETE)
+DELETE https://cse341-kqba.onrender.com/contacts/69751f4ed3d2d34bb4c6b96d
