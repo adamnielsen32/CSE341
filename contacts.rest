@@ -51,7 +51,7 @@ Content-Type: application/json
 }
 
 ### Update Contact (PUT)
-PUT https://cse341-kqba.onrender.com/contacts/69751f4ed3d2d34bb4c6b96d
+PUT https://cse341-kqba.onrender.com/contacts/697522439401bdd29113e6e4
 Content-Type: application/json
 
 {
@@ -63,4 +63,4 @@ Content-Type: application/json
 }
 
 ### Delete Contact (DELETE)
-DELETE https://cse341-kqba.onrender.com/contacts/69751f4ed3d2d34bb4c6b96d
+DELETE https://cse341-kqba.onrender.com/contacts/697522439401bdd29113e6e4
