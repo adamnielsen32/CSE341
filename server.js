@@ -6,7 +6,15 @@ const { initDb } = require('./db/connect');
 
 const port = process.env.PORT || 3000;
 
-// CORS
+// Swagger 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+
+app.use(express.json());
+
+// CORS 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader(
@@ -20,15 +28,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.json());
-
 // Routes
 app.use('/contacts', require('./routes/contacts'));
-
-// Swagger
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // DB + Server
 initDb()
