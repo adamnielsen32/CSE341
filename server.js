@@ -7,7 +7,6 @@ const { initDb } = require('./db/connect');
 const port = 3000;
 
 app 
-    .use(bodyParser.json())
     .use((req, res, next) => {
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Z-Key');
@@ -18,7 +17,7 @@ app
 
 
 app.use(express.json());
-app.use('/', require('./routes'));
+
 
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
