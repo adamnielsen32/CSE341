@@ -23,19 +23,19 @@ Content-Type: application/json
 }
 
 ### PUT
-PUT http://localhost:3000/contacts/69751c48d833433feaccf82c
+PUT http://localhost:3000/contacts/6982bda5b2500
 Content-Type: application/json
 
 {
   "firstName": "Adam",
   "lastName": "Nielsen",
   "email": "updated@test.com",
-  "favoriteColor": "Green",
+  "favoriteColor": "blue",
   "birthday": "1990-01-01"
 }
 
 ### DELETE
-DELETE http://localhost:3000/contacts/69751c48d833433feaccf82c
+DELETE http://localhost:3000/contacts/6982bda5b25008c74b5f5eab
 
 
 ### Create Contact (POST)
